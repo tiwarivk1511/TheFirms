@@ -1,26 +1,23 @@
 package com.android.thefirms.registered_user;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.android.thefirms.Notifications.NotificationActivity;
-import com.android.thefirms.R;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.thefirms.Notifications.NotificationActivity;
+import com.android.thefirms.R;
 import com.android.thefirms.databinding.ActivityRegisteredUserBinding;
+import com.google.android.material.navigation.NavigationView;
 
 public class RegisteredUserActivity extends AppCompatActivity {
 
@@ -68,6 +65,8 @@ public class RegisteredUserActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 

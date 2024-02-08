@@ -22,4 +22,10 @@
         android:name="com.android.thefirms.registered_user.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.android.thefirms.registered_user.ui.support.SupportFragment"
+        android:label="Customer Support"
+        tools:layout="@layout/fragment_support"/>
 </navigation>

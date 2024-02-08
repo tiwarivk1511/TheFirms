@@ -23,6 +23,11 @@
             android:title="Feedback" />
     </group>
 
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/support"
+        android:title="Customer Support"/>
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/signoutBtn"
