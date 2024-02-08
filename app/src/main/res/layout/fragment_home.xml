@@ -392,7 +392,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:fontFamily="@font/poppins_medium"
                         android:text="We simplify every step of your research process"
                         android:textStyle="bold"
