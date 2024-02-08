@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ratings.RatingActivity3">
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ratingImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/review_img_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ratingCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="#E4E4E4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingImg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/ratingTxtView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Review Rating"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/open_sans_variable"
+                        android:text="Share with us your overall experience"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/qualityRatingTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/open_sans_variable"
+                        android:text="How was the quality of the BrancoSoft Private Limited's work?"
+                        android:textSize="15sp"
+                        android:paddingStart="10dp"
+                        />
+
+                    <RatingBar
+                        android:id="@+id/qualityRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:numStars="5"
+                        android:layout_margin="8dp"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        />
+                    <TextView
+                        android:id="@+id/termAndShedulingTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/open_sans_variable"
+                        android:text="How was the Branco Soft Private Limited in terms of schedule and timing ?"
+                        android:textSize="15sp"
+                        android:paddingStart="10dp"
+                        />
+
+                    <RatingBar
+                        android:id="@+id/termShedulingRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:numStars="5"
+                        android:layout_margin="8dp"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        />
+                    <TextView
+                        android:id="@+id/communicationTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/open_sans_variable"
+                        android:text="How was the Branco Soft Private Limited in terms of Communication ?"
+                        android:textSize="15sp"
+                        android:paddingStart="10dp"
+                        />
+                    <RatingBar
+                        android:id="@+id/communicationRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:numStars="5"
+                        android:layout_margin="8dp"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        />
+                    <TextView
+                        android:id="@+id/aboutTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/open_sans_variable"
+                        android:text="What do you like most about BrancoSoft Private Limited?"
+                        android:textSize="15sp"
+                        android:paddingStart="10dp"
+                        />
+                    <RatingBar
+                        android:id="@+id/aboutRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:numStars="5"
+                        android:layout_margin="8dp"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/nextBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:text="Next"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingCardView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

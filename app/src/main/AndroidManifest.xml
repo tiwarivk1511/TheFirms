@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon_black"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon_black"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheFirms"
+        tools:targetApi="31">
+        <activity
+            android:name=".Notifications.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgetPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ratings.RatingActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".ratings.RatingActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".ratings.RatingActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ratings.RatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registered_user.RegisteredUserActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registered_user"
+            android:theme="@style/Theme.TheFirms.NoActionBar" />
+        <activity
+            android:name=".SignupOptionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginOptionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreens.RegisteredUserSignUp.UserSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreens.RegisteredUserLogin.UserLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeScreens.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
