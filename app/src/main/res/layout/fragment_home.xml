@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".registered_user.ui.home.HomeFragment">
 
     <ScrollView
@@ -16,81 +17,74 @@
             android:layout_height="wrap_content"
             android:padding="3dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/searchInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/searchInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/search"
-                    android:drawablePadding="5dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Search web developers, SEO, U…" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/searchLocationInputLayout"
+            <EditText
+                android:id="@+id/searchInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_height="48dp"
+                android:drawableStart="@drawable/search"
+                android:drawablePadding="8dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="130dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/box_bg"
+                android:layout_marginEnd="5dp"
+                android:lines="1"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Search web developers, SEO, U…"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/searchInputLayout">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/searchLocationInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/location_icon"
-                    android:drawablePadding="5dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:hint="Any Location" />
-            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/searchLocationInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/box_bg"
+                android:drawableStart="@drawable/location_icon"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginStart="5dp"
+
+                android:lines="1"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Any Location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchInput" />
+
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/SearchBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/open_sans_variable"
                 android:text="Search"
                 app:cornerRadius="10dp"
-                app:icon="@drawable/search"
-                app:layout_constraintBottom_toBottomOf="@+id/searchLocationInputLayout"
+                android:drawableStart="@drawable/search"
+                app:layout_constraintBottom_toBottomOf="@+id/searchLocationInput"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/searchLocationInputLayout"
-                app:layout_constraintTop_toTopOf="@+id/searchLocationInputLayout" />
+                app:layout_constraintStart_toEndOf="@+id/searchLocationInput"
+                app:layout_constraintTop_toTopOf="@+id/searchLocationInput" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="5dp"
                 android:backgroundTint="@color/black"
                 app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/searchLocationInputLayout">
+                app:layout_constraintTop_toBottomOf="@+id/searchLocationInput">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -135,8 +129,8 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:id="@+id/cardView2"
-                                    android:layout_width="85dp"
-                                    android:layout_height="85dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:layout_marginStart="2dp"
                                     android:layout_marginTop="2dp"
                                     android:layout_marginEnd="2dp"
@@ -161,7 +155,8 @@
                                     android:gravity="center"
                                     android:text="Software Developemnt"
                                     android:textColor="@color/white"
-                                    android:textSize="15sp"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="10dp"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/cardView2" />
@@ -174,8 +169,8 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:id="@+id/cardView3"
-                                    android:layout_width="85dp"
-                                    android:layout_height="85dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:layout_marginStart="2dp"
                                     android:layout_marginTop="2dp"
                                     android:layout_marginEnd="2dp"
@@ -200,7 +195,8 @@
                                     android:gravity="center"
                                     android:text="Web &amp; App Development"
                                     android:textColor="@color/white"
-                                    android:textSize="15sp"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="13sp"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/cardView3" />
@@ -213,8 +209,8 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:id="@+id/cardView4"
-                                    android:layout_width="85dp"
-                                    android:layout_height="85dp"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
                                     android:layout_marginStart="2dp"
                                     android:layout_marginTop="2dp"
                                     android:layout_marginEnd="2dp"
@@ -239,7 +235,8 @@
                                     android:gravity="center_horizontal"
                                     android:text="Graphic Designing"
                                     android:textColor="@color/white"
-                                    android:textSize="15sp"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="13sp"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/cardView4" />
@@ -267,7 +264,7 @@
                                         android:id="@+id/categoryImage4"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:src="@drawable/marketting" />
+                                        android:src="@drawable/marketing" />
                                 </androidx.cardview.widget.CardView>
 
                                 <TextView
@@ -278,7 +275,8 @@
                                     android:gravity="center_horizontal"
                                     android:text="Marketing &amp; Advertising"
                                     android:textColor="@color/white"
-                                    android:textSize="15sp"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="10dp"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/cardView5" />
@@ -317,7 +315,8 @@
                                     android:gravity="center_horizontal"
                                     android:text="Letest Technologies"
                                     android:textColor="@color/white"
-                                    android:textSize="15sp"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="13sp"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/cardView6" />
@@ -356,7 +355,8 @@
                                     android:gravity="center_horizontal"
                                     android:text="Business &amp; IT Services"
                                     android:textColor="@color/white"
-                                    android:textSize="15sp"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="13sp"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/cardView7" />
@@ -371,9 +371,9 @@
                 android:id="@+id/stepCard"
                 android:layout_width="match_parent"
                 android:layout_height="420dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="5dp"
                 android:padding="5dp"
                 app:cardBackgroundColor="#F0ECEC"
                 app:cardCornerRadius="15dp"
@@ -390,12 +390,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textSize="14sp"
                         android:fontFamily="@font/poppins_medium"
-                        android:padding="3dp"
                         android:text="We simplify every step of your research process"
-                        android:textSize="15dp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -403,10 +402,12 @@
 
                     <TextView
                         android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/open_sans_variable"
                         android:gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
                         android:text="Browse, Compare, Shortlist, and Hire your ideal business partner with ease."
                         app:layout_constraintEnd_toEndOf="@id/textView2"
                         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -414,7 +415,7 @@
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="-5dp"
@@ -426,13 +427,13 @@
 
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="5dp"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="35dp"
                         android:src="@drawable/select"
                         app:layout_constraintStart_toEndOf="@+id/imageView3"
-                        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -458,8 +459,8 @@
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginTop="30dp"
                         android:src="@drawable/rating"
                         app:layout_constraintEnd_toEndOf="@+id/imageView4"
@@ -489,8 +490,8 @@
 
                     <ImageView
                         android:id="@+id/checkImage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginTop="35dp"
                         android:src="@drawable/mark"
                         app:layout_constraintEnd_toEndOf="@+id/imageView5"
@@ -519,8 +520,8 @@
 
                     <ImageView
                         android:id="@+id/imageView10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="35dp"
                         android:src="@drawable/message_icon"

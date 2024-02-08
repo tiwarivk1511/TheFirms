@@ -2,9 +2,12 @@ package com.android.thefirms.registered_user;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -19,10 +22,20 @@ import com.android.thefirms.R;
 import com.android.thefirms.databinding.ActivityRegisteredUserBinding;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+
 public class RegisteredUserActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityRegisteredUserBinding binding;
+
+    private Retrofit retrofit;
+    private CompanyApiService companyApiService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +79,54 @@ public class RegisteredUserActivity extends AppCompatActivity {
             }
         });
 
+        // Add text change listener to the search bar
+        binding.appBarRegisteredUser.searchBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                fetchCompanies(query);
+                return false;
+            }
 
-
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                fetchCompanies(newText);
+                return false;
+            }
+        });
     }
 
+    // Method to fetch companies from the API based on the user's input
+    private void fetchCompanies(String query) {
+        // Create a call object for the API method
+        Call<List<Company>> call = companyApiService.getCompanies(query);
 
+        // Execute the call asynchronously
+        call.enqueue(new Callback<List<Company>>() {
+            @Override
+            public void onResponse(Call<List<Company>> call, Response<List<Company>> response) {
+                if (response.isSuccessful()) {
+                    // Handle successful response
+                    List<Company> companies = response.body();
+                    // Update UI with the fetched companies
+                    updateUI(companies);
+                } else {
+                    // Handle error response
+                    // Display appropriate error message to the user
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Company>> call, Throwable t) {
+                // Handle failure (e.g., network error)
+                // Display appropriate error message to the user
+            }
+        });
+    }
+
+    // Method to update the UI with fetched companies
+    private void updateUI(List<Company> companies) {
+        // Update UI logic here
+    }
 
     @Override
     public boolean onSupportNavigateUp() {

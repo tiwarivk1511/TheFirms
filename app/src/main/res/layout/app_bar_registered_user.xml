@@ -25,7 +25,7 @@
 
             <ImageView
                 android:id="@+id/notification"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="end|center"
                 android:layout_marginEnd="5dp"
@@ -37,7 +37,9 @@
                 android:id="@+id/search_bar"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:layout_gravity="end|center" />
+                android:layout_gravity="end|center"
+                />
+
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>

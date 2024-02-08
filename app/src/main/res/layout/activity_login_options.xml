@@ -18,7 +18,7 @@
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:padding="5dp"
                 android:src="@drawable/app_icon_black"
@@ -28,9 +28,10 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="329dp"
+                android:layout_height="326dp"
                 android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/login_option_img"
                 app:layout_constraintEnd_toEndOf="@+id/imageView2"
                 app:layout_constraintStart_toStartOf="@+id/imageView2"
